@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-Components 自定义组件示例代码</title>
+</head>
+
+<body>
+
+  <custom-button text="我是自定义参数-按钮文字测试A"></custom-button>
+  <custom-button text="我是自定义参数-按钮文字测试B"></custom-button>
+  <custom-button text="我是自定义参数-按钮文字测试C"></custom-button>
+
+  <custom-link text="我是自定义参数-Link测试A" href="https://baidu.com"></custom-link>
+  <custom-link text="我是自定义参数-Link测试B" href="https://github.com"></custom-link>
+
+  <!-- 定义模板内容 -->
+  <template id="buttonTemplate">
+    <div class="button"></div>
+    <style>
+      /* :host代表自定义元素本身 */
+      :host {
+        box-sizing: border-box;
+      }
+    </style>
+  </template>
+
+  <template id="linkTemplate">
+    <a class="link"></a>
+    <style>
+      /* :host代表自定义元素本身 */
+      :host {
+        box-sizing: border-box;
+      }
+    </style>
+  </template>
+
+  <script type="text/javascript" src="custom-button.js"></script>
+  <script type="text/javascript" src="custom-link.js"></script>
+
+</body>
+
+</html>
